@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <flow xmlns="http://www.springframework.org/schema/webflow"
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.springframework.org/schema/webflow http://www.springframework.org/schema/webflow/spring-webflow-2.0.xsd">
- <var name="order" class="com.niit.model.CustomerOrder"/>
+      xsi:schemaLocation="http://www.springframework.org/schema/webflow 
+      http://www.springframework.org/schema/webflow/spring-webflow-2.0.xsd
+      http://www.springframework.org/schema/webflow-config
+      http://www.springframework.org/schema/webflow-config/spring-webflow-config-2.0.xsd">
+      
+ <var name="order" class="com.cosmet.model.CustomerOrder"/>
  <action-state id="validateState">
  <evaluate expression="cartDaoImpl.validate(requestParameters.cartId)" result="order.cart"></evaluate>
  <transition to="invalidCartWarning" on="java.io.IOException" ></transition>

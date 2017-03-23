@@ -4,7 +4,7 @@
 
 <html>
 <head>
-<title>Invalid</title>
+<title>Thank u</title>
 </head>
 <body>
 
@@ -13,17 +13,21 @@
         <section>
             <div class="jumbotron">
                 <div class="container">
-                    <h1>Invalid Cart!</h1>
+                    <h1>Thank you for your business!</h1>
+
+                    <p>Your order will be shipped in two business days!</p>
                 </div>
             </div>
         </section>
 
         <section class="container">
-            <p><a href="<spring:url value="/all/product/getAllProducts" />" class="btn btn-info">Products</a></p>
+            <p><a href="<spring:url value="/" />" class="btn btn-primary">OK</a></p>
         </section>
-	</div>
+    </div>
 </div>
-<%-- <%@ include file="/WEB-INF/view/Footer.jsp" %> --%>
 
 </body>
 </html>
+											<!-- Footer Command -->
+							
+						<%@ include file="/WEB-INF/view/Footer.jsp" %>

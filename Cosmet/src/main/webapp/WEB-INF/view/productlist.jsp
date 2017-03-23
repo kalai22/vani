@@ -26,7 +26,14 @@
 					<th style="color:red;">Product Name</th>
 					<th style="color:yellow;">Description</th>
 					<th style="color:blue;">Category</th>
+					
+					<security:authorize access="hasRole('ROLE_ADMIN')">
 					<th style="color:green;">View/Delete/Edit</th>
+					</security:authorize>
+					
+					<security:authorize access="hasRole('ROLE_USER')">
+					<th style="color:green;">View</th>
+					</security:authorize>
 				</tr>
 			</thead>
 			<c:forEach var="p" items="${productlist}">
